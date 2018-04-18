@@ -10,13 +10,10 @@ while pocet_sloupcu <= 0:
 
 for cislo_radku in range(0, pocet_radku):
     for cislo_sloupce in range(0, pocet_sloupcu):
-        if cislo_radku == 0 or cislo_radku == pocet_radku - 1:
+        if (cislo_radku == 0 or cislo_radku == pocet_radku - 1 or
+           cislo_sloupce == 0 or cislo_sloupce == pocet_sloupcu - 1):
             # - 1, protoze range uz posledni cislo neuvazuje
             print("X", end=" ")
         else:
-            if cislo_sloupce == 0 or cislo_sloupce == pocet_sloupcu - 1:
-                # - 1, protoze range uz posledni cislo neuvazuje
-                print("X", end=" ")
-            else:
-                print(" ", end=" ")
+            print(" ", end=" ")
     print()
